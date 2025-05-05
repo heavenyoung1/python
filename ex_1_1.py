@@ -1,4 +1,5 @@
 import collections
+from random import choice
 
 Card = collections.namedtuple("Card", ["rank", "suit"])
 ranks = []
@@ -35,3 +36,6 @@ for card in deck:
 
 print(deck[1:10])
 print(deck)
+
+# Рандомная карта из колоды
+print(choice(deck))
