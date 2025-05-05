@@ -39,3 +39,6 @@ print(deck)
 
 # Рандомная карта из колоды
 print(choice(deck))
+
+print(Card('Q', 'hearts') in deck)
+print(Card('Q', 'lol') in deck)
