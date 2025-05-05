@@ -23,6 +23,9 @@ class FrenchDeck():
     def __getitem__(self, position):
         return self._cards[position]
 
+    def __str__(self):
+        return f"Колода карт длиной {len(self)} включает в себя три первых карты {self._cards[:3]}"
+
 
 deck = FrenchDeck()  # Создаём колоду
 print(deck._cards)  # Выводим все карты
@@ -31,3 +34,4 @@ for card in deck:
     print(card)
 
 print(deck[1:10])
+print(deck)
