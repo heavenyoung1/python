@@ -40,5 +40,25 @@ print(deck)
 # Рандомная карта из колоды
 print(choice(deck))
 
+# Проверка итерируемости класса
 print(Card('Q', 'hearts') in deck)
 print(Card('Q', 'lol') in deck)
+
+suit_values = dict(spades = 3, hearts = 2, diamonds = 1, clubs = 0)
+
+def spades_high(card):
+    rank_value = FrenchDeck.ranks.index(card.rank)
+    return rank_value * len(suit_values) + suit_values[card.suit]
+
+card1 = Card(rank='2', suit='clubs')
+card2 = Card(rank='2', suit='diamonds')
+card3 = Card(rank='2', suit='hearts')
+card4 = Card(rank='2', suit='spades')
+
+print(spades_high(card1))
+print(spades_high(card2))
+print(spades_high(card3))
+print(spades_high(card4))
+
+for card in sorted(deck, key=spades_high):
+    print(card)
