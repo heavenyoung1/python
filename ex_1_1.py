@@ -113,7 +113,7 @@ for tshirt in (f'{c} {s}' for c in colors for s in sizes):
 
 # Кортежи как записи
 
-lax_coordinates = (33.945, -54.33)
+#lax_coordinates = (33.945, -54.33)
 city, year, pop, chg, area = ('Tokyo', 2003, 32_450, 0.66, 8014)
 traveler_ids = [
     ('USA', '31195855'),
@@ -147,3 +147,29 @@ tm = (10, 'alpha', [1, 2]) # Здесь список последний
 
 print(fixed(tf))
 print(fixed(tm))
+
+
+lax_coordinates = (33.945, -54.33)
+lat, long = lax_coordinates # Распаковка
+print(f'latitude {lat}, longitude {long}')
+
+divmod(20, 8)
+print(divmod)
+t = (20, 8)
+print(divmod(*t))
+
+a, b, *rest = range(5)
+a, b, *rest = range(3)
+a, b, *rest = range(2)
+a, *body, c, d = range(5)
+
+def fun(a, b, c, d, *rest):
+    return a, b, c, d, rest
+
+print(fun(*[1, 2], 3, *range(4, 10)))
+
+print(*range(4), 4)
+print([*range(4), 4])
+print({*range(4), 4, *(5, 6, 7, 8)})
+
+# Распаковка вложенных объектов
