@@ -62,3 +62,12 @@ print(spades_high(card4))
 
 for card in sorted(deck, key=spades_high):
     print(card)
+
+x = "ABC"
+codes = [ord(i) for i in x]
+print(codes)
+
+codes1 = [last := ord(c) for c in x]
+print(last)
+print(c)
+
