@@ -70,3 +70,21 @@ print(codes)
 codes1 = [last := ord(c) for c in x]
 print(last)
 
+# Сравнение спискового включения с map и filter
+symbols = "!@#$%^&*()asfgjgkc,xnvg/"
+beyond_ascii = [ord(s) for s in symbols if ord(s) > 100]
+print(beyond_ascii)
+
+beyond_ascii_1 = list(map(lambda c: c ** 2, map(ord, symbols)))
+print((beyond_ascii_1))
+
+def double(value):
+    return value ** 2
+
+s = [1, 2, 3, 4]
+res = map(double, s)
+print(list(res))
+
+# Декартовы произведения
+
+
