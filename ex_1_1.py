@@ -69,5 +69,4 @@ print(codes)
 
 codes1 = [last := ord(c) for c in x]
 print(last)
-print(c)
 
