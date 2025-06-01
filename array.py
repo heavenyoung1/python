@@ -11,3 +11,8 @@ fp = open('floats.bin', 'rb')
 floats2.fromfile(fp, 10**7)
 floats2[-1]
 print(floats == floats2)
+
+octets = array('B', range(6))
+m1 = memoryview(octets)
+print(m1.tolist())
+
