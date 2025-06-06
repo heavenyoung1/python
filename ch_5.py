@@ -2,6 +2,7 @@
 import typing
 from typing import NamedTuple
 from collections import namedtuple
+from dataclasses import dataclass
 
 class Coordinate:
 
@@ -29,3 +30,27 @@ class Coordinate3(NamedTuple):
 belgrad = Coordinate3(48.72, 94.56)
 
 print(belgrad)
+
+# Почему эта строка не работает
+#print(f'IsSubClass {issubclass(Coordinate3, NamedTuple)}')
+
+print(f'IsSubClass {issubclass(Coordinate3, tuple)}')
+
+# Написание класса при помощи декоратора
+
+@dataclass()
+class CoordinateDataClass:
+    lan: float
+    lon: float
+
+    def __str__(self):
+        ns = 'N' if self.lat >= 0 else 'S'
+        we = 'E' if self.lon >= 0 else 'W'
+        return f'{abs(self.lat):.1f}°{ns}, {abs(self.lon):.1f}°{we}'
+
+City = namedtuple('City', 'name country population coordinates')
+tokyo = City('Tokyo', 'JP', 36.933, (35.222, 95.444))
+
+print(tokyo)
+print(f'Tokey = Population {tokyo.population}, coordinates {tokyo.coordinates}')
+
