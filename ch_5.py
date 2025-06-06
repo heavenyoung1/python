@@ -53,4 +53,20 @@ tokyo = City('Tokyo', 'JP', 36.933, (35.222, 95.444))
 
 print(tokyo)
 print(f'Tokey = Population {tokyo.population}, coordinates {tokyo.coordinates}')
+print(City._fields)
+
+delhi_data = ('Delhi NCR', 'IN', 21.395, Coordinate(53.444, 65.000))
+delhi = City._make(delhi_data)
+print(delhi)
+print(delhi._asdict())
+import json
+print(json.dumps(delhi._asdict()))
+
+Coordinate6 = namedtuple('Coordinate6', 'lat lon refrence', defaults=['WSG84'])
+print(Coordinate6(0, 0))
+print(Coordinate6._field_defaults)
+
+l
+
+
 
