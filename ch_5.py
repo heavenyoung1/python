@@ -66,7 +66,14 @@ Coordinate6 = namedtuple('Coordinate6', 'lat lon refrence', defaults=['WSG84'])
 print(Coordinate6(0, 0))
 print(Coordinate6._field_defaults)
 
-l
+class Coordinate7(NamedTuple):
+    lat: float
+    lon: float
+    reference: str = "WSG84"
+
+
+
+
 
 
 
