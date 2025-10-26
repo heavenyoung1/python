@@ -4,8 +4,26 @@
 # Посчитать сколько лет будет через 20 лет
 # Вывести на экран
 
-name = input("Как тебя зовут?: ")
-age = int(input()) #"Сколько тебе лет?: "
-age_ago = age + 20
-out = f"Привет, {name}. Тебе {age} лет. Через 20 лет тебе будет {age_ago}."
-print(out)
+# name = input("Как тебя зовут?: ")
+# age = int(input()) #"Сколько тебе лет?: "
+# age_ago = age + 20
+# out = f"Привет, {name}. Тебе {age} лет. Через 20 лет тебе будет {age_ago}."
+# print(out)
+
+# dogs = [
+#     'Чешка',
+#     'Питбуль',
+#     'Овчарка',
+#     'Мопс',
+# ]
+#
+# for i in dogs:
+#     print((f'Порода {i}')*3)
+
+count = 70
+while count > 25:
+    print(f"До изменения {count}")
+    count = count + 1
+    print(f"После {count}")
+
+
